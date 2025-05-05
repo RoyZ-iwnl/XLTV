@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XLTV</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="light-mode">
+    <header>
+        <div class="header-left">
+            <img src="images/logo.png" alt="Logo" class="logo">
+        </div>
+        <div class="header-right">
+            <a href="https://github.com/RoyZ-iwnl/XLTV-Web" class="icon-link" title="GitHub仓库">
+                <i class="fab fa-github"></i>
+                <span class="tooltip">欢迎提交PR添加烂梗</span>
+            </a>
+            <a href="mailto:Roy@DMR.gg" class="icon-link" title="联系作者">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://space.bilibili.com/13059944" class="icon-link" title="Bilibili">
+                <i class="fa-brands fa-bilibili"></i>
+            </a>
+            <button id="theme-toggle" class="icon-button">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="tabs">
+            <button class="tab-button active" data-tab="random">随机烂梗</button>
+            <button class="tab-button" data-tab="all">全部烂梗</button>
+            <button class="tab-button" data-tab="ranking">危机合约排行（WorkWork）</button>
+        </div>
+
+        <div class="tab-content">
+            <!-- 随机烂梗页面 -->
+            <div id="random" class="tab-pane active">
+                <div class="meme-container">
+                    <p id="random-meme" class="meme-text"></p>
+                    <div class="button-group">
+                        <button id="generate-meme" class="action-button">随机烂梗</button>
+                        <button id="copy-meme" class="action-button">复制烂梗</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 全部烂梗页面 -->
+            <div id="all" class="tab-pane">
+                <div class="meme-list"></div>
+            </div>
+
+            <!-- 危机合约排行页面 -->
+            <div id="ranking" class="tab-pane">
+                <h2>COMING SOON，有没有好心人来点PR啊，我真的是写到不行了（</h2>
+                <table class="ranking-table">
+                    <thead>
+                        <tr>
+                            <th>干员</th>
+                            <th>登顶次数</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 示例数据 -->
+                        <tr>
+                            <td>
+                                <div class="operator-cell">
+                                    <img src="https://media.prts.wiki/d/de/%E5%A4%B4%E5%83%8F_%E9%A3%8E%E7%AC%9B.png" alt="干员头像" class="operator-avatar">
+                                    <div class="operator-info">
+                                        <span class="operator-name">风笛"笛vice"</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>11</td>
+                        </tr>
+                        <!-- 更多干员数据将在这里添加 -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
