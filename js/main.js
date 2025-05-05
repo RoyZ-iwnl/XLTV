@@ -10,6 +10,21 @@ document.addEventListener('DOMContentLoaded', function() {
         themeIcon.classList.toggle('fa-sun');
     });
 
+    // 为所有按钮添加触摸反馈
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+        button.addEventListener('touchstart', function() {
+            this.style.opacity = '0.7';
+        });
+        
+        button.addEventListener('touchend', function() {
+            this.style.opacity = '1';
+        });
+    });
+
+    // 优化移动端点击延迟
+    document.addEventListener('touchstart', function() {}, {passive: true});
+
     // 标签页切换
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabPanes = document.querySelectorAll('.tab-pane');
